@@ -1,0 +1,36 @@
+@startuml
+left to right direction
+
+actor "Пользователь\n(спортсмен)" as U
+actor "Администратор\n(Тренер)" as A
+
+usecase "Регистрация" as U1
+usecase "Вход в систему" as U2
+usecase "Просмотр тренировочных\nпрограмм" as U3
+usecase "Выбор тренировки" as U4
+usecase "Выбор количества подходов\nи времени тренировки" as U5
+usecase "Начало тренировки" as U6
+
+usecase "Вход в систему " as A1
+usecase "Редактирование\nпрограмм" as A2
+usecase "Создать новую\nпрограмму" as A3
+usecase "Добавление новых\nадминистраторов" as A4
+usecase "Изменить\nупражнения" as A5
+usecase "Изменить количество\nподходов" as A6
+usecase "Изменить время\nна отдых" as A7
+
+U -- U1
+U -- U2
+U2 -- U3
+U3 ..> U4 : #include
+U4 ..> U5 : #include
+U5 ..> U6 : #include
+
+A -- A1
+A1 -- A2
+A1 -- A3
+A1 -- A4
+A2 -- A5
+A2 -- A6
+A2 -- A7
+@enduml
