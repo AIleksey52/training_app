@@ -18,7 +18,23 @@
 ## Технологии
 **Язык:** Python, **БД:** SQLite
 
-## Диаграмма
+## Запуск
+python src/database/init_db.py
+
+## Диаграммы
+
+## Диаграммы
+
+### Use Case
 ![Use Case](docs/diagrams/usecase.png)
+
+### Блок-схема: регистрация пользователя
+![Регистрация](docs/diagrams/blokshema1.png)
+
+### Блок-схема: поиск тренировки
+![Поиск тренировки](docs/diagrams/blokshema2.png)
+
+### ER-диаграмма
+![ER-диаграмма](docs/diagrams/er_diagram.png)
 
 Подробнее: [GitHub](https://github.com)
