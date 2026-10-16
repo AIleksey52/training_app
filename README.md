@@ -18,7 +18,18 @@
 ## Технологии
 **Язык:** Python, **БД:** SQLite
 
-## Диаграмма
+## Диаграммы
+
+### Use Case
 ![Use Case](docs/diagrams/usecase.png)
+
+### Блок-схема: регистрация пользователя
+![Регистрация](docs/diagrams/flowchart_registration.png)
+
+### Блок-схема: поиск тренировки
+![Поиск тренировки](docs/diagrams/flowchart_search.png)
+
+### ER-диаграмма
+![ER-диаграмма](docs/diagrams/er_diagram.png)
 
 Подробнее: [GitHub](https://github.com)
