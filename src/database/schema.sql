@@ -19,6 +19,7 @@ CREATE TABLE users (
     user_id INTEGER PRIMARY KEY AUTOINCREMENT,
     login TEXT NOT NULL UNIQUE,
     full_name TEXT NOT NULL,
+    password_hash TEXT NOT NULL,
     role_id INTEGER NOT NULL,
     FOREIGN KEY (role_id) REFERENCES user_roles (role_id)
 );
@@ -56,10 +57,11 @@ CREATE TABLE program_exercises (
 INSERT INTO difficulty_levels (name) VALUES ('Начальный'), ('Средний'), ('Продвинутый');
 INSERT INTO user_roles (name) VALUES ('Тренер'), ('Спортсмен');
 
-INSERT INTO users (login, full_name, role_id) VALUES
-    ('trainer1', 'Иванов Пётр', 1),
-    ('athlete1', 'Петров Сергей', 2),
-    ('athlete2', 'Сидорова Анна', 2);
+-- пароли: trainer1 / trainer123, athlete1 и athlete2 / athlete123 (хранится SHA-256)
+INSERT INTO users (login, full_name, password_hash, role_id) VALUES
+    ('trainer1', 'Иванов Пётр', '5b3d264e4cdc2c39ca6708b3e1e21f082722be12e63ee21484bdbe15735ab066', 1),
+    ('athlete1', 'Петров Сергей', '8f927203b5777f8b90cdfc41eb9f24593959e5057283b1856567ff3f6cd93092', 2),
+    ('athlete2', 'Сидорова Анна', '8f927203b5777f8b90cdfc41eb9f24593959e5057283b1856567ff3f6cd93092', 2);
 
 INSERT INTO exercises (name, description) VALUES
     ('Приседания', 'Базовое упражнение для ног'),

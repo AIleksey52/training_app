@@ -1,18 +1,25 @@
-import sqlite3
 from pathlib import Path
 
-BASE_DIR = Path(__file__).parent
-DB_PATH = BASE_DIR / "training.db"
-SCHEMA_PATH = BASE_DIR / "schema.sql"
+from database.database import DB_PATH, get_connection
+
+SCHEMA_PATH = Path(__file__).parent / "schema.sql"
+
 
 def init_db():
-    conn = sqlite3.connect(DB_PATH)
-    conn.execute("PRAGMA foreign_keys = ON")
+    """Создаёт таблицы и заполняет их тестовыми данными (пересоздаёт БД)."""
+    conn = get_connection()
     with open(SCHEMA_PATH, encoding="utf-8") as f:
         conn.executescript(f.read())
     conn.commit()
     conn.close()
     print("База данных создана:", DB_PATH)
+
+
+def ensure_db():
+    """Создаёт БД, если файла ещё нет."""
+    if not DB_PATH.exists():
+        init_db()
+
 
 if __name__ == "__main__":
     init_db()
