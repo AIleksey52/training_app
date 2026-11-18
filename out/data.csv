@@ -1,0 +1,3 @@
+﻿program_id;name;description;duration_weeks;level.level_id;level.name;trainer.user_id;trainer.full_name;exercises
+1;Старт для новичков;Базовая программа на всё тело;4;1;Начальный;1;Иванов Пётр;position=1, exercise_id=1, name=Приседания, sets=3, reps=12, rest_seconds=60 | position=2, exercise_id=2, name=Отжимания, sets=3, reps=10, rest_seconds=60 | position=3, exercise_id=4, name=Планка, sets=3, reps=30, rest_seconds=45
+2;Сила и масса;Программа на набор силы;8;2;Средний;1;Иванов Пётр;position=1, exercise_id=1, name=Приседания, sets=4, reps=8, rest_seconds=90 | position=2, exercise_id=3, name=Подтягивания, sets=4, reps=6, rest_seconds=120

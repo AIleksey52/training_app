@@ -10,6 +10,7 @@ usecase "Просмотр тренировочных\nпрограмм" as U3
 usecase "Выбор тренировки" as U4
 usecase "Выбор количества подходов\nи времени тренировки" as U5
 usecase "Начало тренировки" as U6
+usecase "Смена пароля" as U7
 
 usecase "Вход в систему " as A1
 usecase "Редактирование\nпрограмм" as A2
@@ -18,6 +19,8 @@ usecase "Добавление новых\nадминистраторов" as A4
 usecase "Изменить\nупражнения" as A5
 usecase "Изменить количество\nподходов" as A6
 usecase "Изменить время\nна отдых" as A7
+usecase "Смена пароля " as A8
+usecase "Выгрузка данных\n(JSON, CSV, XML, YAML)" as A9
 
 U -- U1
 U -- U2
@@ -25,6 +28,7 @@ U2 -- U3
 U3 ..> U4 : #include
 U4 ..> U5 : #include
 U5 ..> U6 : #include
+U2 -- U7
 
 A -- A1
 A1 -- A2
@@ -33,4 +37,6 @@ A1 -- A4
 A2 -- A5
 A2 -- A6
 A2 -- A7
+A1 -- A8
+A1 -- A9
 @enduml

@@ -82,3 +82,13 @@ def delete(item_id: int):
     cur.execute("DELETE FROM program_exercises WHERE id = ?", (item_id,))
     conn.commit()
     conn.close()
+
+
+def get_all() -> list[ProgramExercise]:
+    """Все упражнения всех программ одним запросом (для выгрузки данных)."""
+    conn = get_connection()
+    cur = conn.cursor()
+    cur.execute(_SELECT + " ORDER BY pe.program_id, pe.position")
+    rows = cur.fetchall()
+    conn.close()
+    return [_map(r) for r in rows]

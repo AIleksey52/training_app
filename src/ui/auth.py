@@ -1,15 +1,11 @@
-from getpass import getpass
-
 from services import auth_service
 from services.errors import ServiceError
 from ui.helpers import ask
 
 
 def _read_password(prompt: str) -> str:
-    try:
-        return getpass(f"{prompt} (ввод скрыт): ")
-    except Exception:  # некоторые консоли IDE не поддерживают скрытый ввод
-        return input(f"{prompt}: ")
+    # Обычный input: скрытый ввод (getpass) зависает в Git Bash на Windows
+    return input(f"{prompt}: ")
 
 
 def login():

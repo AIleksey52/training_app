@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<programs>
+  <program>
+    <program_id>1</program_id>
+    <name>Старт для новичков</name>
+    <description>Базовая программа на всё тело</description>
+    <duration_weeks>4</duration_weeks>
+    <level>
+      <level_id>1</level_id>
+      <name>Начальный</name>
+    </level>
+    <trainer>
+      <user_id>1</user_id>
+      <full_name>Иванов Пётр</full_name>
+    </trainer>
+    <exercises>
+      <exercise>
+        <position>1</position>
+        <exercise_id>1</exercise_id>
+        <name>Приседания</name>
+        <sets>3</sets>
+        <reps>12</reps>
+        <rest_seconds>60</rest_seconds>
+      </exercise>
+      <exercise>
+        <position>2</position>
+        <exercise_id>2</exercise_id>
+        <name>Отжимания</name>
+        <sets>3</sets>
+        <reps>10</reps>
+        <rest_seconds>60</rest_seconds>
+      </exercise>
+      <exercise>
+        <position>3</position>
+        <exercise_id>4</exercise_id>
+        <name>Планка</name>
+        <sets>3</sets>
+        <reps>30</reps>
+        <rest_seconds>45</rest_seconds>
+      </exercise>
+    </exercises>
+  </program>
+  <program>
+    <program_id>2</program_id>
+    <name>Сила и масса</name>
+    <description>Программа на набор силы</description>
+    <duration_weeks>8</duration_weeks>
+    <level>
+      <level_id>2</level_id>
+      <name>Средний</name>
+    </level>
+    <trainer>
+      <user_id>1</user_id>
+      <full_name>Иванов Пётр</full_name>
+    </trainer>
+    <exercises>
+      <exercise>
+        <position>1</position>
+        <exercise_id>1</exercise_id>
+        <name>Приседания</name>
+        <sets>4</sets>
+        <reps>8</reps>
+        <rest_seconds>90</rest_seconds>
+      </exercise>
+      <exercise>
+        <position>2</position>
+        <exercise_id>3</exercise_id>
+        <name>Подтягивания</name>
+        <sets>4</sets>
+        <reps>6</reps>
+        <rest_seconds>120</rest_seconds>
+      </exercise>
+    </exercises>
+  </program>
+</programs>

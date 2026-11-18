@@ -1,4 +1,4 @@
-from services import exercise_service, program_service, user_service
+from services import exercise_service, export_service, program_service, user_service
 from ui import auth
 from ui.common import (program_details_screen, programs_by_level_screen,
                        run_safely, search_screen, show_levels,
@@ -215,13 +215,21 @@ def users_menu(user):
         pause()
 
 
+def export_screen():
+    paths = export_service.export_programs()
+    print("Программы выгружены в папку out:")
+    for path in paths:
+        print("  ", path.name)
+
+
 def trainer_menu(user):
     while True:
         print(f"\n===== Тренер ({user.login}) =====")
         print("1. Тренировочные программы")
         print("2. Упражнения")
         print("3. Пользователи и тренеры")
-        print("4. Сменить пароль")
+        print("4. Выгрузка данных (JSON, CSV, XML, YAML)")
+        print("5. Сменить пароль")
         print("0. Выйти из аккаунта")
         choice = input("Выберите действие: ").strip()
         if choice == "1":
@@ -231,6 +239,9 @@ def trainer_menu(user):
         elif choice == "3":
             users_menu(user)
         elif choice == "4":
+            run_safely(export_screen)
+            pause()
+        elif choice == "5":
             auth.change_password(user)
         elif choice == "0":
             break
