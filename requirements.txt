@@ -1,0 +1,2 @@
+# Внешних зависимостей нет: проект использует только стандартную библиотеку Python 3.10+
+# (sqlite3, dataclasses, hashlib, json, csv, xml.etree.ElementTree).
